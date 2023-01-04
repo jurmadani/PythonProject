@@ -1,6 +1,6 @@
 from tkinter import *
 from PIL import ImageTk, Image
-import imagesPaths as path
+import imagesPath as path
 
 splashScreen_root = Tk()
 splashScreenShowTime = 3000
@@ -8,7 +8,7 @@ splashScreenShowTime = 3000
 class splash:
     def __init__(self,root) -> None:
         self.root = root
-        self.image_path = "images/splashScreenImage.png"
+        self.image_path = "images\splashScreenImage.png"
     def show(self):
         self.root.geometry("505x910")
 
