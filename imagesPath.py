@@ -1,0 +1,1 @@
+splashScreenPath = "/images/splashScreenImage.png"
