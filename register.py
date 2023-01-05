@@ -44,8 +44,8 @@ class RegisterWindow:
                                      text="REGISTER",
                                      height=1,
                                      width=15,
-                                     command=lambda: register(
-                                         usernameEntry.get(), passwordEntry.get(), emailEntry.get(), registerWindow))
+                                     command=lambda: registerFunction(
+                                         self.usernameEntry.get(), self.passwordEntry.get(), self.emailEntry.get(), self.root))
 
         # POSITIONING
         self.title.place(x=600, y=90, anchor=CENTER)
