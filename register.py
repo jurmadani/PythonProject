@@ -1,13 +1,9 @@
 from tkinter import *
 from tkinter import messagebox, ttk
 from PIL import ImageTk, Image
+from registerUser import registerUser
 
 registerWindowRoot = Tk()
-
-
-def registerFunction(username, password, email, root):
-    if username == "" or password == "" or email == "":
-        messagebox.showerror("Error!", "All fields are required")
 
 class RegisterWindow:
     def __init__(self, root):
@@ -44,7 +40,7 @@ class RegisterWindow:
                                      text="REGISTER",
                                      height=1,
                                      width=15,
-                                     command=lambda: registerFunction(
+                                     command=lambda: registerUser(
                                          self.usernameEntry.get(), self.passwordEntry.get(), self.emailEntry.get(), self.root))
 
         # POSITIONING
