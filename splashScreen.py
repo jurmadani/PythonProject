@@ -8,7 +8,7 @@ splashScreenShowTime = 3000
 class splash:
     def __init__(self,root) -> None:
         self.root = root
-        self.image_path = "images\splashScreenImage.png"
+        self.image_path = path.splashScreenPath
     def show(self):
         self.root.geometry("505x910")
 

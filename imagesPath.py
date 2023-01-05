@@ -1,1 +1,1 @@
-splashScreenPath = "/images/splashScreenImage.png"
+splashScreenPath = "images\splashScreenImage.png"
