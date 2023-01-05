@@ -1,4 +1,5 @@
 from register import *
 
-newRegister = RegisterWindow(registerWindowRoot)
-newRegister.DisplayRegisterWindow()
+def displayRegisterWindow():
+    newRegister = RegisterWindow(registerWindowRoot)
+    newRegister.DisplayRegisterWindow()

@@ -27,6 +27,7 @@ class LoginWindow:
                           bg="#9cc9dc",
                           font=("Arial", 10),
                           cursor="hand2",)
+        #self.text.bind("<Button-1>", registerWindow)
 
         # POSITIONING
         self.title.place(x=600, y=90, anchor=CENTER)
@@ -42,3 +43,6 @@ class LoginWindow:
         self.root.iconbitmap(path.logoPath)
         self.root.geometry("1202x797")
         self.root.configure(bg="#9cc9dc")
+
+        #ACTIVATE THE WINDOW
+        mainloop()
