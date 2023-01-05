@@ -50,3 +50,6 @@ class RegisterWindow:
         self.emailLabel.place(x=600, y=460, anchor=CENTER)
         self.emailEntry.place(x=540, y=485)
         self.registerButton.place(x=545, y=525)
+
+        #ACTIVATE THE WINDOW
+        mainloop()
