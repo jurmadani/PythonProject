@@ -1,4 +1,4 @@
-import login
+from login import *
 
-newLoginWindow = login.LoginWindow(login.loginWindowRoot)
-newLoginWindow.showLoginPage()
+newLogin = LoginWindow(loginWindowRoot)
+newLogin.showLoginPage()
