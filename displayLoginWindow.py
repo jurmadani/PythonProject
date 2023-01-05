@@ -1,4 +1,8 @@
 from login import *
 
-newLogin = LoginWindow(loginWindowRoot)
-newLogin.showLoginPage()
+def displayLoginWindow():
+    newLogin = LoginWindow(loginWindowRoot)
+    newLogin.showLoginPage()
+    mainloop()
+
+displayLoginWindow()
