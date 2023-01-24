@@ -1,6 +1,7 @@
 from tkinter import *
 from PIL import ImageTk, Image
 import imagesPath as path
+from displayRegisterWindow import displayRegisterWindow
 
 loginWindowRoot = Tk()
 
@@ -27,7 +28,7 @@ class LoginWindow:
                           bg="#9cc9dc",
                           font=("Arial", 10),
                           cursor="hand2",)
-        #self.text.bind("<Button-1>", registerWindow)
+        self.text.bind("<Button-1>", displayRegisterWindow)
 
         # POSITIONING
         self.title.place(x=600, y=90, anchor=CENTER)
