@@ -1,10 +1,12 @@
 import sys
 sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
-sys.path.insert(2,'C://Users//Dani Jurma//Desktop//project_newVersion//Views')
+sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Views')
+sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion')
 from tkinter import *
 from PIL import ImageTk, Image
 import imagesPath as path
-from displayRegisterWindow import displayRegisterWindow
+import displayRegisterWindow
+
 
 loginWindowRoot = Tk()
 
@@ -31,7 +33,7 @@ class LoginWindow:
                           bg="#9cc9dc",
                           font=("Arial", 10),
                           cursor="hand2",)
-        self.text.bind("<Button-1>", displayRegisterWindow)
+        self.text.bind("<Button-1>", displayRegisterWindow.displayRegisterWindowFunction)
 
         # POSITIONING
         self.title.place(x=600, y=90, anchor=CENTER)
