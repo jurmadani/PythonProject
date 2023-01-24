@@ -1,4 +1,4 @@
-from login import *
+from Controller.login import *
 
 def displayLoginWindow():
     newLogin = LoginWindow(loginWindowRoot)

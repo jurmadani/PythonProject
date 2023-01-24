@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox, ttk
 from PIL import ImageTk, Image
-from registerUser import registerUser
+from Utility.registerUser import registerUser
 
 registerWindowRoot = Tk()
 

@@ -1,7 +1,7 @@
 from tkinter import *
 from PIL import ImageTk, Image
-import imagesPath as path
-from displayRegisterWindow import displayRegisterWindow
+import Utility.imagesPath as path
+from Views.displayRegisterWindow import displayRegisterWindow
 
 loginWindowRoot = Tk()
 

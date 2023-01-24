@@ -1,4 +1,4 @@
-from register import *
+from Controller.register import *
 
 def displayRegisterWindow():
     newRegister = RegisterWindow(registerWindowRoot)

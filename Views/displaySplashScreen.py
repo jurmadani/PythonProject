@@ -1,4 +1,4 @@
-import splashScreen
+import Controller.splashScreen as splashScreen
 from tkinter import *
 
 def destroySplashScreen():

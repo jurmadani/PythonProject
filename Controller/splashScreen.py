@@ -1,6 +1,6 @@
 from tkinter import *
 from PIL import ImageTk, Image
-import imagesPath as path
+import Utility.imagesPath as path
 
 splashScreen_root = Tk()
 splashScreenShowTime = 3000
