@@ -1,7 +1,9 @@
+import sys
+sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
 from tkinter import *
 from tkinter import messagebox, ttk
 from PIL import ImageTk, Image
-from Utility.registerUser import registerUser
+from registerUser import *
 
 registerWindowRoot = Tk()
 

@@ -1,7 +1,7 @@
-from Controller.login import *
+from Controller.login import login
 
 def displayLoginWindow():
-    newLogin = LoginWindow(loginWindowRoot)
+    newLogin = login.LoginWindow(login.loginWindowRoot)
     newLogin.showLoginPage()
 
 displayLoginWindow()

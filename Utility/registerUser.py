@@ -1,8 +1,10 @@
+import sys
+sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
 from tkinter import messagebox, ttk
-from Utility.connection import *
+from connection import *
 from random import randint
 from werkzeug.security import check_password_hash, generate_password_hash
-from Utility.visaCardGenerator import visa16
+from visaCardGenerator import visa16
 
 def registerUser(username, password, email, root):
     if username == "" or password == "" or email == "":
