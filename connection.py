@@ -1,4 +1,4 @@
-import adminCredentials as admin
+import Utility.adminCredentials as admin
 import pymysql
 
 class connection:
