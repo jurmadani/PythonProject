@@ -1,7 +1,10 @@
+import sys
+sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
+sys.path.insert(2,'C://Users//Dani Jurma//Desktop//project_newVersion//Views')
 from tkinter import *
 from PIL import ImageTk, Image
-import Utility.imagesPath as path
-from Views.displayRegisterWindow import displayRegisterWindow
+import imagesPath as path
+from displayRegisterWindow import displayRegisterWindow
 
 loginWindowRoot = Tk()
 
