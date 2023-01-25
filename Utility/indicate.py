@@ -1,14 +1,16 @@
 import sys
 sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
+sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Views')
 from imagesPath import *
 from PIL import ImageTk, Image
 from tkinter import *
 import PIL.Image
+from displayVisaCard import *
 
 def home_page(main_frame, username):
     global number
     number = 1
-    #display_label(main_frame, number, username)
+    displayVisaCard(main_frame, number, username)
     switchIimage = ImageTk.PhotoImage(
         PIL.Image.open(switchLogoPath).resize((63, 63), PIL.Image.ANTIALIAS)
     )
