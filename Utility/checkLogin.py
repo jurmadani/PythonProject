@@ -2,9 +2,9 @@ from werkzeug.security import check_password_hash
 from connection import *
 from tkinter import messagebox
 import sys
-sys.path.insert(
-    1, 'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
-
+sys.path.insert(1, 'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
+sys.path.insert(1, 'C://Users//Dani Jurma//Desktop//project_newVersion//Views')
+from viewMainAppWindow import *
 
 def loginUser(username, password, mainWindowRoot):
     if username == "" or password == "":
@@ -22,6 +22,10 @@ def loginUser(username, password, mainWindowRoot):
         else:
             if (check_password_hash(row[2], password)) is True:
                 print("login succesfull!")
+                destroyPrevRoot(mainWindowRoot)
+                mainAppObject = mainAppWindow(username)
+                mainAppObject.displayMainWindowApp()
+
             else:
                 messagebox.showerror(
                     "Error!", "The password or the username is not correct"
