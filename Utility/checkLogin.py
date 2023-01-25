@@ -4,7 +4,7 @@ from tkinter import messagebox
 import sys
 sys.path.insert(1, 'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
 sys.path.insert(1, 'C://Users//Dani Jurma//Desktop//project_newVersion//Views')
-from viewMainAppWindow import *
+from mainApp import *
 
 def loginUser(username, password, mainWindowRoot):
     if username == "" or password == "":

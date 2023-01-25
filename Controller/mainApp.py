@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
 from tkinter import *
 from PIL import ImageTk, Image
 import imagesPath as path
@@ -9,6 +11,7 @@ def destroyPrevRoot(prevRoot):
 
 def createMainAppWindowRoot():
     mainAppRoot = Tk()
+    return mainAppRoot
 
 
 class mainAppWindow:
@@ -18,6 +21,7 @@ class mainAppWindow:
         self.username = username
 
     def displayMainWindowApp(self):
+
         string = "Your logged in as " + self.username
         text = Label(self.root, text=string, font=("Arial", 15), bg="#9cc9dc")
 
@@ -79,3 +83,5 @@ class mainAppWindow:
         self.root.geometry("1202x797")
         self.root.configure(bg="#9cc9dc")
         self.root.eval("tk::PlaceWindow %s center")
+
+        mainloop()
