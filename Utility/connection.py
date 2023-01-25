@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
 import adminCredentials as admin
 import pymysql
 

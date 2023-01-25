@@ -1,15 +1,20 @@
+import sys
+sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
 from tkinter import *
 from tkinter import messagebox, ttk
 from PIL import ImageTk, Image
-from registerUser import registerUser
+from registerUser import *
 
-registerWindowRoot = Tk()
+def createRegisterWindowRoot():
+    registerWindowRoot = Tk()
+    return registerWindowRoot
 
 class RegisterWindow:
-    def __init__(self, root):
+    def __init__(self):
+        registerWindowRoot = createRegisterWindowRoot()
         self.root = registerWindowRoot
 
-    def DisplayRegisterWindow(self):
+    def DisplayRegisterWindow(self): 
         self.root.title("Register")
         self.root.geometry("1202x797")
         self.root.iconbitmap("favicon.ico")

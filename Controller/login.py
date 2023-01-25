@@ -1,6 +1,14 @@
+import sys
+sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
+sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Views')
+sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion')
 from tkinter import *
 from PIL import ImageTk, Image
 import imagesPath as path
+import displayRegisterWindow
+from checkLogin import *
+import PIL.Image
+
 
 loginWindowRoot = Tk()
 
@@ -10,7 +18,7 @@ class LoginWindow:
         self.root = loginWindowRoot
 
     def showLoginPage(self):
-        self.logo = ImageTk.PhotoImage(Image.open(path.logoPath))
+        self.logo = ImageTk.PhotoImage(PIL.Image.open(path.logoPath))
         self.logoWidget = Label(self.root, image=self.logo, bg="#9cc9dc")
         self.title = Label(self.root, bg="#9cc9dc",
                            text="Welcome to Stash", width=60, font=("bold", 40))
@@ -22,12 +30,13 @@ class LoginWindow:
         self.passwordEntry = Entry(self.root, bg="white", show="*")
         self.loginButton = Button(self.root, text="LOGIN",
                                   height=1,
-                                  width=15)
+                                  width=15,
+                                  command=lambda: loginUser(self.usernameEntry.get(),self.passwordEntry.get(),self.root))
         self.text = Label(self.root, text="Don't have an account? Register",
                           bg="#9cc9dc",
                           font=("Arial", 10),
                           cursor="hand2",)
-        #self.text.bind("<Button-1>", registerWindow)
+        self.text.bind("<Button-1>", displayRegisterWindow.displayRegisterWindowFunction)
 
         # POSITIONING
         self.title.place(x=600, y=90, anchor=CENTER)

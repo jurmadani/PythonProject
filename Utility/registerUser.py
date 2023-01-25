@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
 from tkinter import messagebox, ttk
 from connection import *
 from random import randint
