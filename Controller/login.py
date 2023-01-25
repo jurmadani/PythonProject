@@ -7,6 +7,7 @@ from PIL import ImageTk, Image
 import imagesPath as path
 import displayRegisterWindow
 from checkLogin import *
+import PIL.Image
 
 
 loginWindowRoot = Tk()
@@ -17,7 +18,7 @@ class LoginWindow:
         self.root = loginWindowRoot
 
     def showLoginPage(self):
-        self.logo = ImageTk.PhotoImage(Image.open(path.logoPath))
+        self.logo = ImageTk.PhotoImage(PIL.Image.open(path.logoPath))
         self.logoWidget = Label(self.root, image=self.logo, bg="#9cc9dc")
         self.title = Label(self.root, bg="#9cc9dc",
                            text="Welcome to Stash", width=60, font=("bold", 40))

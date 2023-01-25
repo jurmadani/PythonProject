@@ -1,8 +1,10 @@
-import sys
-sys.path.insert(1,'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
-from tkinter import *
-from PIL import ImageTk, Image
 import imagesPath as path
+from PIL import ImageTk, Image
+from tkinter import *
+import PIL.Image
+import sys
+sys.path.insert(1, 'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
+
 
 def destroyPrevRoot(prevRoot):
     prevRoot.destroy()
@@ -21,12 +23,12 @@ class mainAppWindow:
 
     def displayMainWindowApp(self):
 
-        #LABELS
+        # LABELS
         string = "Your logged in as " + self.username
         text = Label(self.root, text=string, font=("Arial", 15), bg="#9cc9dc")
 
         bankLogoImage = ImageTk.PhotoImage(
-            Image.open("favicon.ico").resize((33, 33), Image.ANTIALIAS)
+            PIL.Image.open("favicon.ico").resize((33, 33), PIL.Image.ANTIALIAS)
         )
 
         bankLogoWidget = Label(self.root, image=bankLogoImage, bg="#9cc9dc")
@@ -38,7 +40,7 @@ class mainAppWindow:
             bg="#9cc9dc",
         )
 
-        userLogo = ImageTk.PhotoImage(Image.open(path.userLogoPath))
+        userLogo = ImageTk.PhotoImage(PIL.Image.open(path.userLogoPath))
         userLogoWidget = Label(self.root, image=userLogo, bg="#9cc9dc")
         userLogoWidget.img = userLogo
 
@@ -67,19 +69,54 @@ class mainAppWindow:
         home_indicate.place(x=3, y=70, width=5, height=40)
         addMoney_indicate = Label(options_frame, text="", bg="#9cc9dc")
         addMoney_indicate.place(x=3, y=220, width=5, height=40)
-        transactionHistory_indicate = Label(options_frame, text="", bg="#9cc9dc")
+        transactionHistory_indicate = Label(
+            options_frame, text="", bg="#9cc9dc")
         transactionHistory_indicate.place(x=3, y=370, width=5, height=68)
         payBills_indicate = Label(
-        options_frame,
-        text="",
-        bg="#9cc9dc",
+            options_frame,
+            text="",
+            bg="#9cc9dc",
         )
         payBills_indicate.place(x=3, y=520, width=5, height=40)
-    
+
+        home_btn = Button(
+            options_frame,
+            text="HOME",
+            font=("Bold", 17),
+            bd=0,
+            bg="#9cc9dc"
+        )
+        home_btn.place(x=10, y=70)
+
+        addMoney_button = Button(
+            options_frame,
+            text="ADD MONEY",
+            font=("Bold", 17),
+            bd=0,
+            bg="#9cc9dc"
+        )
+        addMoney_button.place(x=10, y=220)
+
+        transactionHistory_button = Button(
+            options_frame,
+            text="TRANSACTION\nHISTORY",
+            font=("Bold", 17),
+            bd=0,
+            bg="#9cc9dc"
+        )
+        transactionHistory_button.place(x=10, y=370)
+
+        payBills_button = Button(
+            options_frame,
+            text="PAY BILLS",
+            font=("Bold", 17),
+            bd=0,
+            bg="#9cc9dc")
+        payBills_button.place(x=10, y=520)
+        
+
         self.root.title("Stash Bank")
         self.root.iconbitmap("favicon.ico")
         self.root.geometry("1202x797")
         self.root.configure(bg="#9cc9dc")
         self.root.eval("tk::PlaceWindow %s center")
-
-        mainloop()
