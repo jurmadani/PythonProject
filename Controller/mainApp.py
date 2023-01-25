@@ -4,7 +4,6 @@ from tkinter import *
 from PIL import ImageTk, Image
 import imagesPath as path
 
-
 def destroyPrevRoot(prevRoot):
     prevRoot.destroy()
 
@@ -22,6 +21,7 @@ class mainAppWindow:
 
     def displayMainWindowApp(self):
 
+        #LABELS
         string = "Your logged in as " + self.username
         text = Label(self.root, text=string, font=("Arial", 15), bg="#9cc9dc")
 
@@ -63,7 +63,6 @@ class mainAppWindow:
         bankLogoWidget.place(x=10, y=10)
         titleText.place(x=60, y=-2)
 
-        '''
         home_indicate = Label(options_frame, text="", bg="#9cc9dc")
         home_indicate.place(x=3, y=70, width=5, height=40)
         addMoney_indicate = Label(options_frame, text="", bg="#9cc9dc")
@@ -76,8 +75,7 @@ class mainAppWindow:
         bg="#9cc9dc",
         )
         payBills_indicate.place(x=3, y=520, width=5, height=40)
-        '''
-
+    
         self.root.title("Stash Bank")
         self.root.iconbitmap("favicon.ico")
         self.root.geometry("1202x797")
