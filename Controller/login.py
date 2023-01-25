@@ -6,6 +6,7 @@ from tkinter import *
 from PIL import ImageTk, Image
 import imagesPath as path
 import displayRegisterWindow
+from checkLogin import *
 
 
 loginWindowRoot = Tk()
@@ -28,7 +29,8 @@ class LoginWindow:
         self.passwordEntry = Entry(self.root, bg="white", show="*")
         self.loginButton = Button(self.root, text="LOGIN",
                                   height=1,
-                                  width=15)
+                                  width=15,
+                                  command=lambda: loginUser(self.usernameEntry.get(),self.passwordEntry.get(),self.root))
         self.text = Label(self.root, text="Don't have an account? Register",
                           bg="#9cc9dc",
                           font=("Arial", 10),
