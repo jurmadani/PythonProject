@@ -9,7 +9,7 @@ from indicate import *
 from displayHomePage import *
 from displayAddMoneyPage import *
 from displayTransactionHistoryPage import *
-
+from displayPayBillsPage import *
 
 
 
@@ -144,7 +144,17 @@ class mainAppWindow:
             text="PAY BILLS",
             font=("Bold", 17),
             bd=0,
-            bg="#9cc9dc")
+            bg="#9cc9dc",
+            command=lambda: indicate(
+            payBills_indicate,
+            payBills_page,
+            home_indicate,
+            addMoney_indicate,
+            transactionHistory_indicate,
+            payBills_indicate,
+            main_frame,
+            self.username,
+        ))
         payBills_button.place(x=10, y=520)
         
 
