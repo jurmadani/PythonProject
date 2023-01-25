@@ -8,6 +8,11 @@ sys.path.insert(1, 'C://Users//Dani Jurma//Desktop//project_newVersion//Views')
 from indicate import *
 from displayHomePage import *
 from displayAddMoneyPage import *
+from displayTransactionHistoryPage import *
+
+
+
+
 
 def destroyPrevRoot(prevRoot):
     prevRoot.destroy()
@@ -16,6 +21,8 @@ def destroyPrevRoot(prevRoot):
 def createMainAppWindowRoot():
     mainAppRoot = Tk()
     return mainAppRoot
+
+
 
 
 class mainAppWindow:
@@ -118,7 +125,17 @@ class mainAppWindow:
             text="TRANSACTION\nHISTORY",
             font=("Bold", 17),
             bd=0,
-            bg="#9cc9dc"
+            bg="#9cc9dc",
+            command=lambda: indicate(
+            transactionHistory_indicate,
+            transactionHistory_page,
+            home_indicate,
+            addMoney_indicate,
+            transactionHistory_indicate,
+            payBills_indicate,
+            main_frame,
+            self.username,
+        )
         )
         transactionHistory_button.place(x=10, y=370)
 
