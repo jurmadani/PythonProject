@@ -6,11 +6,11 @@ from PIL import ImageTk, Image
 from tkinter import *
 import PIL.Image
 from displayVisaCard import *
+import globalValue
+
 
 def home_page(main_frame, username):
-    global number
-    number = 1
-    displayVisaCard(main_frame, number, username)
+    displayVisaCard(main_frame, globalValue.number, username)
     switchIimage = ImageTk.PhotoImage(
         PIL.Image.open(switchLogoPath).resize((63, 63), PIL.Image.ANTIALIAS)
     )
@@ -19,6 +19,7 @@ def home_page(main_frame, username):
     )
     switchIimageWidget.img = switchIimage
     switchIimageWidget.place(x=800, y=383)
+    switchIimageWidget.bind("<Button-1>",lambda event, root=main_frame, number_=globalValue.number: displayVisaCard(root, globalValue.number, username))
 
     text = Label(
         main_frame,

@@ -6,8 +6,11 @@ from PIL import ImageTk, Image
 from tkinter import *
 import PIL.Image
 
+def changeValue(newValue):
+    import globalValue
+    globalValue.number = newValue
+
 def displayVisaCard(root, imageNumber, username):
-    global number
     if imageNumber is 1:
         # Create a label widget
         img = ImageTk.PhotoImage(
@@ -58,7 +61,8 @@ def displayVisaCard(root, imageNumber, username):
         expirationDate.place(x=269, y=540)
         cardHolder.place(x=269, y=495)
         balanceText.place(x=450, y=113)
-        number = 2
+        changeValue(2)
+
     else:
         img = ImageTk.PhotoImage(
             PIL.Image.open(cardImage2Path).resize((500, 248), PIL.Image.ANTIALIAS)
@@ -91,4 +95,6 @@ def displayVisaCard(root, imageNumber, username):
         label2.place(x=350, y=100)
         balanceText.place(x=450, y=113)
         CVV.place(x=440, y=440)
-        number = 1
+        #number = 1
+        changeValue(1)
+        
