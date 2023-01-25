@@ -4,7 +4,9 @@ from tkinter import *
 import PIL.Image
 import sys
 sys.path.insert(1, 'C://Users//Dani Jurma//Desktop//project_newVersion//Utility')
+sys.path.insert(1, 'C://Users//Dani Jurma//Desktop//project_newVersion//Views')
 from indicate import *
+from displayHomePage import *
 
 def destroyPrevRoot(prevRoot):
     prevRoot.destroy()
@@ -80,7 +82,7 @@ class mainAppWindow:
         payBills_indicate.place(x=3, y=520, width=5, height=40)
 
         indicate(home_indicate,home_page,home_indicate,addMoney_indicate,transactionHistory_indicate,payBills_indicate,main_frame,self.username,)
-
+        
         home_btn = Button(
             options_frame,
             text="HOME",
