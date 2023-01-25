@@ -7,6 +7,7 @@ sys.path.insert(1, 'C://Users//Dani Jurma//Desktop//project_newVersion//Utility'
 sys.path.insert(1, 'C://Users//Dani Jurma//Desktop//project_newVersion//Views')
 from indicate import *
 from displayHomePage import *
+from displayAddMoneyPage import *
 
 def destroyPrevRoot(prevRoot):
     prevRoot.destroy()
@@ -88,7 +89,8 @@ class mainAppWindow:
             text="HOME",
             font=("Bold", 17),
             bd=0,
-            bg="#9cc9dc"
+            bg="#9cc9dc",
+            command=lambda: indicate(home_indicate,home_page,home_indicate,addMoney_indicate,transactionHistory_indicate,payBills_indicate,main_frame,self.username,)
         )
         home_btn.place(x=10, y=70)
 
@@ -97,7 +99,17 @@ class mainAppWindow:
             text="ADD MONEY",
             font=("Bold", 17),
             bd=0,
-            bg="#9cc9dc"
+            bg="#9cc9dc",
+            command=lambda: indicate(
+            addMoney_indicate,
+            addMoney_page,
+            home_indicate,
+            addMoney_indicate,
+            transactionHistory_indicate,
+            payBills_indicate,
+            main_frame,
+            self.username,
+        )
         )
         addMoney_button.place(x=10, y=220)
 
